@@ -17,7 +17,7 @@
     <% @url_queues.each do |url_queue| %>
       <tr>
         <td><%= url_queue.date_added_to_queue %></td>
-        <td><%= url_queue.publication %></td>
+        <td style="white-space: nowrap;"><%= url_queue.publication %></td>
         <td><%= link_to url_queue.url, "http://#{url_queue.url}", :target => "_blank" %></td>
         <td><%= url_queue.date_scraped %></td>
         <td><%= link_to 'Show', url_queue %></td>
