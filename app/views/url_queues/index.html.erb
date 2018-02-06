@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Url Queues</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date added to queue</th>
+      <th>Publication</th>
+      <th>Url</th>
+      <th>Date scraped</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @url_queues.each do |url_queue| %>
+      <tr>
+        <td><%= url_queue.date_added_to_queue %></td>
+        <td><%= url_queue.publication %></td>
+        <td><%= link_to url_queue.url, "http://#{url_queue.url}", :target => "_blank" %></td>
+        <td><%= url_queue.date_scraped %></td>
+        <td><%= link_to 'Show', url_queue %></td>
+        <td><%= link_to 'Edit', edit_url_queue_path(url_queue) %></td>
+        <td><%= link_to 'Destroy', url_queue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Url Queue', new_url_queue_path %>

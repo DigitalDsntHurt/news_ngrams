@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date added to queue:</strong>
+  <%= @url_queue.date_added_to_queue %>
+</p>
+
+<p>
+  <strong>Publication:</strong>
+  <%= @url_queue.publication %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @url_queue.url %>
+</p>
+
+<p>
+  <strong>Date scraped:</strong>
+  <%= @url_queue.date_scraped %>
+</p>
+
+<%= link_to 'Edit', edit_url_queue_path(@url_queue) %> |
+<%= link_to 'Back', url_queues_path %>

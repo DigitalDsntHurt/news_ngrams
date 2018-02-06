@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_added_to_queue: 2018-01-21
+  publication: MyString
+  url: MyString
+  date_scraped: 2018-01-21
+
+two:
+  date_added_to_queue: 2018-01-21
+  publication: MyString
+  url: MyString
+  date_scraped: 2018-01-21

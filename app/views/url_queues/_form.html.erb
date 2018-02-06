@@ -1,0 +1,37 @@
+<%= form_for(url_queue) do |f| %>
+  <% if url_queue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(url_queue.errors.count, "error") %> prohibited this url_queue from being saved:</h2>
+
+      <ul>
+      <% url_queue.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date_added_to_queue %>
+    <%= f.date_select :date_added_to_queue %>
+  </div>
+
+  <div class="field">
+    <%= f.label :publication %>
+    <%= f.text_field :publication %>
+  </div>
+
+  <div class="field">
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_scraped %>
+    <%= f.date_select :date_scraped %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

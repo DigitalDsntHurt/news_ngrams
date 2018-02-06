@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2018-01-21
+  'n': MyString
+  terms: MyString
+  occurrences: 1
+
+two:
+  date: 2018-01-21
+  'n': MyString
+  terms: MyString
+  occurrences: 1

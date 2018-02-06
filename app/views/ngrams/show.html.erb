@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @ngram.date %>
+</p>
+
+<p>
+  <strong>N:</strong>
+  <%= @ngram.n %>
+</p>
+
+<p>
+  <strong>Terms:</strong>
+  <%= @ngram.terms %>
+</p>
+
+<p>
+  <strong>Occurrences:</strong>
+  <%= @ngram.occurrences %>
+</p>
+
+<%= link_to 'Edit', edit_ngram_path(@ngram) %> |
+<%= link_to 'Back', ngrams_path %>
