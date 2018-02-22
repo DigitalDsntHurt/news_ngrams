@@ -18,7 +18,11 @@
       <tr>
         <td><%= url_queue.date_added_to_queue %></td>
         <td style="white-space: nowrap;"><%= url_queue.publication %></td>
-        <td><%= link_to url_queue.url, "http://#{url_queue.url}", :target => "_blank" %></td>
+        <% if url_queue.url.start_with?("http") %>
+          <td><%= link_to url_queue.url, "#{url_queue.url}", :target => "_blank" %></td>
+        <% else %>
+          <td><%= link_to url_queue.url, "http://#{url_queue.url}", :target => "_blank" %></td>
+        <% end %>
         <td><%= url_queue.date_scraped %></td>
         <td><%= link_to 'Show', url_queue %></td>
         <td><%= link_to 'Edit', edit_url_queue_path(url_queue) %></td>
